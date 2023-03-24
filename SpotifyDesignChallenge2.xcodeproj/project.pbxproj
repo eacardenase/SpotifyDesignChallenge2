@@ -8,22 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		20C091F229CE0EE400E07CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C091F129CE0EE400E07CDD /* AppDelegate.swift */; };
-		20C091F429CE0EE400E07CDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C091F329CE0EE400E07CDD /* SceneDelegate.swift */; };
 		20C091F629CE0EE400E07CDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C091F529CE0EE400E07CDD /* ViewController.swift */; };
-		20C091F929CE0EE400E07CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C091F729CE0EE400E07CDD /* Main.storyboard */; };
 		20C091FB29CE0EE500E07CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C091FA29CE0EE500E07CDD /* Assets.xcassets */; };
 		20C091FE29CE0EE500E07CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C091FC29CE0EE500E07CDD /* LaunchScreen.storyboard */; };
+		20C0920729CE10D500E07CDD /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C0920629CE10D500E07CDD /* Factory.swift */; };
+		20C0920929CE13AD00E07CDD /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C0920829CE13AD00E07CDD /* UIColor+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20C091EE29CE0EE400E07CDD /* SpotifyDesignChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyDesignChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C091F129CE0EE400E07CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C091F329CE0EE400E07CDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		20C091F529CE0EE400E07CDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		20C091F829CE0EE400E07CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C091FA29CE0EE500E07CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C091FD29CE0EE500E07CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C091FF29CE0EE500E07CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C0920629CE10D500E07CDD /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		20C0920829CE13AD00E07CDD /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		20C0920A29CE24D200E07CDD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		20C091E529CE0EE400E07CDD = {
 			isa = PBXGroup;
 			children = (
+				20C0920A29CE24D200E07CDD /* README.md */,
 				20C091F029CE0EE400E07CDD /* SpotifyDesignChallenge2 */,
 				20C091EF29CE0EE400E07CDD /* Products */,
 			);
@@ -56,15 +58,23 @@
 		20C091F029CE0EE400E07CDD /* SpotifyDesignChallenge2 */ = {
 			isa = PBXGroup;
 			children = (
+				20C0920529CE10C300E07CDD /* Utils */,
 				20C091F129CE0EE400E07CDD /* AppDelegate.swift */,
-				20C091F329CE0EE400E07CDD /* SceneDelegate.swift */,
 				20C091F529CE0EE400E07CDD /* ViewController.swift */,
-				20C091F729CE0EE400E07CDD /* Main.storyboard */,
 				20C091FA29CE0EE500E07CDD /* Assets.xcassets */,
 				20C091FC29CE0EE500E07CDD /* LaunchScreen.storyboard */,
 				20C091FF29CE0EE500E07CDD /* Info.plist */,
 			);
 			path = SpotifyDesignChallenge2;
+			sourceTree = "<group>";
+		};
+		20C0920529CE10C300E07CDD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20C0920629CE10D500E07CDD /* Factory.swift */,
+				20C0920829CE13AD00E07CDD /* UIColor+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,6 @@
 			files = (
 				20C091FE29CE0EE500E07CDD /* LaunchScreen.storyboard in Resources */,
 				20C091FB29CE0EE500E07CDD /* Assets.xcassets in Resources */,
-				20C091F929CE0EE400E07CDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +149,14 @@
 			files = (
 				20C091F629CE0EE400E07CDD /* ViewController.swift in Sources */,
 				20C091F229CE0EE400E07CDD /* AppDelegate.swift in Sources */,
-				20C091F429CE0EE400E07CDD /* SceneDelegate.swift in Sources */,
+				20C0920729CE10D500E07CDD /* Factory.swift in Sources */,
+				20C0920929CE13AD00E07CDD /* UIColor+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		20C091F729CE0EE400E07CDD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20C091F829CE0EE400E07CDD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		20C091FC29CE0EE500E07CDD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +294,6 @@
 				INFOPLIST_FILE = SpotifyDesignChallenge2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +321,6 @@
 				INFOPLIST_FILE = SpotifyDesignChallenge2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
